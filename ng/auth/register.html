@@ -1,20 +1,97 @@
-<md-content layout-padding>
-  <form name="register">
-    <div layout-gt-xs="row">
-      <md-input-container class="md-block" flex-gt-xs>
-        <label>Email</label>
-        <input ng-model="user.email" type="email">
-      </md-input-container>
-      <md-input-container class="md-block" flex-gt-xs>
-        <label>Password</label>
-        <input ng-model="user.password" type="password">
-      </md-input-container>
+<script>
+    $(document).ready(function() {
+        $('select').material_select();
+    });
+
+</script>
+<div class="container">
+
+    <div class="row">
+        <div class="col s12">
+
+            <form action="">
+
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title">Registrazione</span>
+
+
+                        <div class="iscompany">
+                            <p>
+                                <input type="radio" name="company" id="iscompany" ng-model="s.user.iscompany" value="1">
+                                <label for="iscompany">Azienda</label>
+                            </p>
+                            <p>
+                                <input type="radio" name="company" id="notcompany" ng-model="s.user.notcompany" value="0">
+                                <label for="notcompany">Privato</label>
+                            </p>
+
+                        </div>
+                        <div class="input-field" ng-show="s.user.iscompany == true">
+                            <input type="text" id="company" class="validate" ng-model="s.user.company">
+                            <label for="company">Azienda</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="name" class="validate" ng-model="s.user.name">
+                            <label for="name">Nome</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="text" id="surname" class="validate" ng-model="s.user.surname">
+                            <label for="surname">Cognome</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="text" id="email" class="validate" ng-model="s.user.email">
+                            <label for="email">Email</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="password" class="validate" ng-model="s.user.password">
+                            <label for="password">Password</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="password" id="password2" class="validate" ng-model="s.user.password_confirmation">
+                            <label for="password2">Conferma password</label>
+                        </div>
+
+                        <div class="input-field">
+                            <select>
+                                <option value="avatar1">avatar1</option>
+                                <option value="avatar2">avatar2</option>
+                                <option value="avatar3">avatar3</option>
+                            </select>
+                            <label>Scegli il tuo avatar</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="text" id="plate" class="validate" ng-model="s.user.plate">
+                            <label for="plate">Targa del tuo veicolo</label>
+                        </div>
+
+
+                        <div class="input-field">
+                            <input type="checkbox" id="privacy" class="validate" ng-model="s.user.privacy">
+                            <label for="privacy">Do il mio consenso alla privacy</label>
+                        </div>
+                        <div class="input-field">
+                            <input type="checkbox" id="commercial" class="validate" ng-model="s.user.commercial">
+                            <label for="commercial">Do il mio consenso al trattamento dei dati a fini
+                                commerciali</label>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="card-action">
+
+
+                            <a class="btn waves-effect waves-light" ng-click="s.submit(s.user)" href>
+                                Registrati
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
-    <div layout-gt-xs="row">
-      <md-input-container class="md-block" flex-gt-xs>
-        <md-button class="md-raised" ng-click="s.submit(user)">Register</md-button>
-      </md-input-container>
-    </div>
-      
-  </form>
-</md-content>
+</div>

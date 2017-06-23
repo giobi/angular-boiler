@@ -1,0 +1,62 @@
+<script>
+    $(function () {
+
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+    })
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">Auto</div>
+
+                    <form>
+                        <div class="input-field">
+                            <input type="text" ng-model="s.car.plate">
+                            <label>Targa</label>
+                        </div>
+                        <a href ng-click="s.platecheck(s.car.plate)" class="waves-effect waves-light btn">Controlla targa</a>
+
+                        <div class="input-field">
+                            <select ng-model="s.car.brand_id" class="browser-default" ng-change="s.modelcheck(s.car.brand_id)">
+                                <option value="" disabled selected>Seleziona una marca</option>
+                                <option value="{{brand.idMarca}}" ng-repeat="brand in s.brands">{{brand.Marca}}</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <select ng-model="s.car.model_id" class="browser-default" ng-change="s.versioncheck(s.car.model_id)">
+                                <option value="" disabled selected>Seleziona una marca per vedere i modelli</option>
+                                <option value="{{model.idModello}}" ng-repeat="model in s.models">{{model.Modello}} / {{model.ModelloAnno}}</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <select ng-model="s.car.version_id" class="browser-default">
+                                <option value="" disabled selected>Seleziona un modello per vedere le versioni</option>
+                                <option value="{{version.idVeicolo}}" ng-repeat="version in s.versions">{{version.Versione}}</option>
+                            </select>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="number" ng-model="s.car.year">
+                            <label>Anno</label>
+                        </div>
+
+                        <div class="input-field">
+                            <input type="date" class="datepicker" ng-model="s.car.immatricolazione">
+                            <label>Data di immatricolazione</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-action">
+                    <a href ng-click="s.submit(s.car)" class="btn">Salva</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

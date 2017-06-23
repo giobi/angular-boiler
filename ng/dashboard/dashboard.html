@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <h2>Dashboard</h2>
+        </div>
+        <div class="col s4">
+            <div class="card darken-1">
+                <div class="card-image">
+                    <img src="http://lorempixel.com/400/200/abstract" alt="">
+                </div>
+                <div class="card-content">
+                    {{s.user.name}} {{s.user.surname}}
+                </div>
+                <div class="card-action">
+                    <a href="#/profile">Modifica profilo</a>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="col s8">
+            <div class="card" ng-repeat="car in s.cars">
+                <div class="card-image">
+                    <img src="https://images.pexels.com/photos/24353/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb"
+                         alt="">
+                </div>
+                <div class="card-content">
+                    <div class="card-title">
+                        {{car.model.name}} / {{car.year}}
+                    </div>
+                    {{car.version.name}} <br>
+                    {{car.brand.name}}
+                </div>
+                <div class="card-action">
+                    <a href="/car/{{car.id}}" class="btn">
+                        Modifica auto
+                    </a>
+                </div>
+            </div>
+
+
+
+
+        </div>
+        <div class="col s12">
+            <div class="row">
+                <div class="col s3">
+                    <p><a href="/app/#/preventivo/assicurazione" class="btn">Preventivo Assicurazione</a>
+                    </p>
+                </div>
+                <div class="col s3">
+                    <p>
+                        <a href class="btn">Preventivo Assicurazione</a>
+                    </p>
+                </div>
+                <div class="col s3"><p><a href class="btn">Preventivo Assicurazione</a></p></div>
+                <div class="col s3"><p><a href class="btn">Preventivo Assicurazione</a></p></div>
+                <div class="col s3"><p><a href class="btn">Preventivo Assicurazione</a></p></div>
+                <div class="col s3"><p><a href class="btn">Preventivo Assicurazione</a></p></div>
+                <div class="col s3"><p><a href class="btn">Preventivo Assicurazione</a></p></div>
+                <div class="col s3"><p><a href class="btn">Preventivo Assicurazione</a></p></div>
+            </div>
+        </div>
+    </div>
+
+</div>

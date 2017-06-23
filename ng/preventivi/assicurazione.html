@@ -1,0 +1,103 @@
+<script>
+    $(function () {
+
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+    })
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <h2>Richiedi un preventivo</h2>
+
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">Dati del contraente</div>
+                    <div class="row">
+                        <div class="col s6">
+                            <div class="input-field">
+                                <input type="date" class="datepicker" ng-model="s.request.birth">
+                                <label>Data di nascita</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.request.birthplace">
+                                <label>Comune di nascita</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.request.livingplace">
+                                <label>Comune di residenza</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.request.married">
+                                <label>Stato civile</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.request.studies">
+                                <label>Titolo di studio</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.request.livingplace">
+                                <label>Professione</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.request.livingplace">
+                                <label>Anno di conseguimento della patente</label>
+                            </div>
+
+
+                            <div class="input-field">
+                                <input type="date" class="datepicker" ng-model="s.request.expire">
+                                <label>Data di scadenza dell'attuale polizza</label>
+                            </div>
+                        </div>
+                        <div class="col s6">
+                            <div class="input-field">
+                                <input type="text" ng-model="s.request.name">
+                                <label>Nome</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.request.surname">
+                                <label>Cognome</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.request.address">
+                                <label>Indirizzo</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.request.email">
+                                <label>Email</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.request.phone">
+                                <label>Telefono</label>
+                            </div>
+                            <p>
+                                <input type="checkbox" id="sameaddress" ng-model="s.request.sameaddress"/>
+                                <label for="sameaddress">L'indirizzo di residenza &egrave; uguale a quello di
+                                    fatturazione</label>
+                            </p>
+
+                            <p>
+                                <input type="checkbox" id="samedriver" ng-model="s.request.samedriver"/>
+                                <label for="samedriver">Il contraente &egrave; il proprietario del veicolo</label>
+                            </p>
+
+                            <p>
+                                <input type="checkbox" id="alreadyown" ng-model="s.request.alreadyown"/>
+                                <label for="alreadyown">Ho gi&agrave; acquistato l'auto che sto assicurando</label>
+                            </p>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="card-action">
+                    <a href ng-click="s.submit(s.request)" class="btn">Invia richiesta</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

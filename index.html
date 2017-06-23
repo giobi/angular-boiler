@@ -2,27 +2,47 @@
 <html lang="en" ng-app="app">
 <head>
     <meta charset="UTF-8">
-    <title>Angular Boiler</title>
+    <title>Hubmot app</title>
 
     <base href="/app/">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-aria.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-aria.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-animate.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
 
     <script type="text/javascript" src="/app/ng/app.js"></script>
+    <script type="text/javascript" src="/app/ng/common/interceptors.js"></script>
+    <script type="text/javascript" src="/app/ng/common/api.js"></script>
+    <script type="text/javascript" src="/app/ng/common/nav.js"></script>
+
+    <script type="text/javascript" src="/app/ng/auth/auth.js"></script>
     <script type="text/javascript" src="/app/ng/auth/register.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-material/1.1.1/angular-material.min.css">
+    <script type="text/javascript" src="/app/ng/auth/login.js"></script>
+
+    <script type="text/javascript" src="/app/ng/dashboard/dashboard.js"></script>
+    <script type="text/javascript" src="/app/ng/dashboard/profile.js"></script>
+
+    <script type="text/javascript" src="/app/ng/preventivi/assicurazione.js"></script>
+
+    <script type="text/javascript" src="/app/ng/car/car.js"></script>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 
 </head>
 <body>
-<md-nav-bar md-selected-nav-item="register">
-    <md-nav-item md-nav-href="#/register" name="register" aria-label="register">Register</md-nav-item>
-</md-nav-bar>
-<div layout="row" layout-align="center center">
-    <ng-view></ng-view>
-    aaa
-</div>
+<navbar></navbar>
+
+<ng-view></ng-view>
 </body>
 </html>

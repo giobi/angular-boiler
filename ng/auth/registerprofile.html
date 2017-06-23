@@ -1,0 +1,48 @@
+<script>
+    $(function () {
+
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+    });
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-content">
+                    <div class="card-title">Informazioni aggiuntive</div>
+                    <div class="input-field">
+                        <input type="date" class="datepicker" ng-model="s.user.insurance">
+                        <label>Quando scade la tua assicurazione?</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="date" class="datepicker" ng-model="s.user.bollo">
+                        <label>Quando scade il bollo?</label>
+                    </div>
+                    <p>Effettui il cambio di gomme stagionale?</p>
+
+                    <div class="switch">
+                        <label>
+                            No
+                            <input type="checkbox" ng-model="s.user.tires">
+                            <span class="lever"></span>
+                            S&igrave;
+                        </label>
+                    </div>
+
+                    <div class="input-field">
+                        <input type="number" ng-model="s.user.km">
+                        <label>Quanti km percorri in un anno?</label>
+
+                    </div>
+
+                </div>
+                <div class="card-action">
+                    <a href class="btn" ng-click="s.submit(s.user)">Vai al prossimo step</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

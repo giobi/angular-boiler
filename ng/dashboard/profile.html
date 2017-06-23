@@ -1,0 +1,162 @@
+<script>
+    $(function () {
+        $('.datepicker').pickadate({
+            selectMonths: true, // Creates a dropdown to control month
+            selectYears: 15 // Creates a dropdown of 15 years to control year
+        });
+        $('ul.tabs').tabs();
+    })
+</script>
+
+<div class="container">
+
+    <div class="row">
+        <div class="col s12">
+            <h2>Gestione profilo</h2>
+            <ul class="tabs">
+                <li class="tab col s3"><a class="active" href="#profile">Profilo</a></li>
+                <li class="tab col s3"><a href="#license">Patente</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12" id="profile">
+            <div class="card">
+                <div class="card-content">
+
+
+                    <div class="row">
+                        <div class="col s6">
+                            <div class="input-field">
+                                <input type="text" ng-model="s.user.email">
+                                <label>Email</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.user.name">
+                                <label>Nome</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.user.surname">
+                                <label>Cognome</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.user.phone">
+                                <label>Cellulare</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.user.address">
+                                <label>Indirizzo</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.user.city">
+                                <label>Citt&agrave;</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.user.district">
+                                <label>Provincia</label>
+                            </div>
+
+                        </div>
+                        <div class="col s6">
+                            <div class="input-field">
+                                <input type="text" ng-model="s.user.cap">
+                                <label>Cap</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.user.country">
+                                <label>Nazione</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="date" ng-model="s.user.birth" class="datepicker">
+                                <label>Data di nascita</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.user.birthplace">
+                                <label>Luogo di nascita</label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text">
+                                <label>Stato civile</label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text">
+                                <label>Titolo di studio</label>
+                            </div>
+
+                            <div class="input-field">
+                                <input type="text">
+                                <label>Professione</label>
+                            </div>
+
+                            <p>Sesso</p>
+
+                            <p>
+                                <input type="radio" ng-model="s.user.sex" value="F" id="sexf">
+                                <label for="sexf">Donna</label>
+                            </p>
+
+                            <p>
+                                <input type="radio" ng-model="s.user.sex" value="M" id="sexm">
+                                <label for="sexm">Uomo</label>
+                            </p>
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href ng-click="s.submit(s.user)" class="btn">Salva modifiche</a>
+                </div>
+            </div>
+        </div>
+        <div class="col s12" id="license">
+            <div class="card">
+                <div class="card-content">
+
+
+                    <div class="row">
+                        <div class="col s6">
+                            <div class="input-field">
+                                <input type="text" ng-model="s.license.number">
+                                <label>Numero patente</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" ng-model="s.license.releaser">
+                                <label>Rilasciata da</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="date" class="datepicker" ng-model="s.license.released">
+                                <label>In data</label>
+                            </div>
+
+
+                        </div>
+                        <div class="col s6">
+                            <div class="input-field">
+                                <input type="date" ng-model="s.license.expire" class="datepicker">
+                                <label>Scadenza</label>
+                            </div>
+                            <div class="input-field">
+                                <input type="text">
+                                <label>Anno di conseguimento</label>
+                            </div>
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="card-action">
+                    <a href ng-click="s.submitlicense(s.license)" class="btn">Salva modifiche</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

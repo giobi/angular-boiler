@@ -1,0 +1,19 @@
+<nav>
+    <div class="container">
+
+        <div class="nav-wrapper">
+            <div class="row">
+                <div class="col s12">
+                    <a href="#" class="brand-logo">Logo</a>
+                    <ul id="nav" class="right hide-on-med-and-down">
+                        <li><a href="/app/#/login" ng-if="!s.auth.me">Login</a></li>
+                        <li ng-class="{active: s.location == 'register'}" ng-if="!s.auth.me"><a href="/app/#/register">Registrazione</a></li>
+                        <li><a href="/app/#/dashboard" ng-if="s.auth.me">Dashboard</a></li>
+                        <li><a href ng-click="s.auth.logout()" ng-if="s.auth.me">Logout</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
